@@ -1,0 +1,11 @@
+ls -l test.4
+pwd
+SLEEP 1
+INT
+jobs
+pwd
+INT
+INT
+ls -l test.3
+pwd
+exit

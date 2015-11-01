@@ -1,0 +1,51 @@
+.\"Processs this file with
+.\" groff -man -Tascii tsh.1
+.\"
+.TH TSH 1 "Oct 2015" Linux "User Manuals"
+.SH NAME
+tsh \- tiny shell
+.SH SYNOPSIS
+.I ./tsh
+.B [
+.I command
+.B ] | [
+.I command
+.B ] | [
+.I command
+.B ] ...
+.SH DESCRIPTION
+.B tsh
+The tiny shell is a simple command line interpreter which have the basic operations from kernel and system. It can control process, handle signals, execute commands, and redirect I/O. It is written in C for Unix system.  
+.SH OPTIONS
+There're several options in the tiny shell.
+.IP ./tsh
+Run the tiny shell.
+.IP exit
+Exit the tiny shell.	
+.IP &
+Add a job to background.
+.IP "fg [ID]"
+Tell a job to continue and bring the backgrounded job to the foreground. 
+.IP "bg [ID]"
+Send SIGCONT to a backgrounded job.
+.IP jobs
+Print out a table of all currently Running or Stopped jobs. 
+.SH FILES
+.I tsh.c
+.RS
+The main function is inside this file, and invokes signal handler. 
+.RE
+.I interprter.c
+.RS
+Parse the input commands into the desired format.
+.RE
+.I runtime.c
+.RS
+Evaluate and run commands.
+.RE
+.I io.c
+.RS
+Manipulate the I/O part of shell.
+.SH AUTHOR
+Ang Shen<asi031>  Jixiao Ma<jmq856>
+

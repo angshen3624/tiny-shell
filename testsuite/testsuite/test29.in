@@ -1,0 +1,4 @@
+ls / > file1.test.txt
+wc < file1.test.txt
+cat file1.test.txt
+exit
